@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cookie Page</title>
+</head>
+<body>
+    <h1>Kamaraj College of Engineering and Technology</h1>
+    <h2>Srideepalakshmi III-IT[A]</h2>
+    <h3>Creation Session and Cookies using Django</h3>
+    
+    <form method="POST" action="{% url 'cookie_login' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile" required><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Session Page</title>
+</head>
+<body>
+    <h1>Kamaraj College of Engineering and Technology</h1>
+    <h2>Srideepalakshmi III-IT[A]</h2>
+    <h3>Creation Session and Cookies using Django</h3>
+    
+    <form method="POST" action="{% url 'session_login' %}">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
